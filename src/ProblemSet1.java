@@ -26,16 +26,16 @@ public class ProblemSet1 {
          *
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-         final float conversionFactor = 25.4f;
+         final float inchToMillimeter = 25.4f;
 
          final float length = 8.5f;
          final float width = 11f;
 
-         double answer = (conversionFactor*length)*(conversionFactor*width);
-         DecimalFormat exc1Format = new DecimalFormat("#,###.##");
-         String answerFinal = exc1Format.format(answer);
+         double answerEx1 = (inchToMillimeter*length)*(inchToMillimeter*width);
+         DecimalFormat commaTwoDecimals = new DecimalFormat("#,###.##");
+         String answerEx1Final = commaTwoDecimals.format(answerEx1);
 
-         System.out.println("\n" + answerFinal + " square millimeters.");
+         System.out.println("\n" + answerEx1Final + " square millimeters.\n");
 
         /*
          * Exercise 2.
@@ -43,7 +43,10 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
+         final double inchToCentimeter = 2.54;
+         double answerEx2 = ((length* 2* inchToCentimeter) + (width * 2* inchToCentimeter));
 
+         System.out.println(answerEx2 + " centimeters.\n");
 
         /*
          * Exercise 3.
