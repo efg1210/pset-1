@@ -32,7 +32,7 @@ public class ProblemSet1 {
          final float width = 11f;
 
          double answerEx1 = (inchToMillimeter*length)*(inchToMillimeter*width);
-         DecimalFormat commaTwoDecimals = new DecimalFormat("#,###.##");
+         DecimalFormat commaTwoDecimals = new DecimalFormat("#,###.00");
          String answerEx1Final = commaTwoDecimals.format(answerEx1);
 
          System.out.println("\n" + answerEx1Final + " square millimeters.\n");
@@ -55,7 +55,9 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-
+         double answerEx3 = Math.hypot(length, width);
+         String answerEx3Final = commaTwoDecimals.format(answerEx3);
+         System.out.println(answerEx3Final + " inches.\n");
 
         /*
          * Exercise 4.
