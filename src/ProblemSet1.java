@@ -13,6 +13,9 @@
  */
 
 import java.lang.Math;
+import java.text.DecimalFormat;
+
+// cd ~/Desktop/APCSA/pset-1/src/
 
 public class ProblemSet1 {
 
@@ -23,15 +26,16 @@ public class ProblemSet1 {
          *
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-         float conversionFactor = 25.4f;
+         final float conversionFactor = 25.4f;
 
-         float length = 8.5f;
-         float width = 11f;
+         final float length = 8.5f;
+         final float width = 11f;
 
          double answer = (conversionFactor*length)*(conversionFactor*width);
-         answer = Math.ceil(answer*100)/100;
+         DecimalFormat exc1Format = new DecimalFormat("#,###.##");
+         String answerFinal = exc1Format.format(answer);
 
-         System.out.println("\n" + answer + " square millimeters.");
+         System.out.println("\n" + answerFinal + " square millimeters.");
 
         /*
          * Exercise 2.
