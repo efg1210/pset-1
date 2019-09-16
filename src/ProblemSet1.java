@@ -26,16 +26,16 @@ public class ProblemSet1 {
          *
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-         final float inchToMillimeter = 25.4f;
+        final float inchToMillimeter = 25.4f;
 
-         final float length = 8.5f;
-         final float width = 11f;
+        final float length = 8.5f;
+        final float width = 11f;
 
-         double answerEx1 = (inchToMillimeter*length)*(inchToMillimeter*width);
-         DecimalFormat commaTwoDecimals = new DecimalFormat("#,###.00");
-         String answerEx1Final = commaTwoDecimals.format(answerEx1);
+        double answerEx1 = (inchToMillimeter*length)*(inchToMillimeter*width);
+        DecimalFormat commaTwoDecimals = new DecimalFormat("#,###.00");
+        String answerEx1Final = commaTwoDecimals.format(answerEx1);
 
-         System.out.println("\n" + answerEx1Final + " square millimeters.\n");
+        System.out.println("\n" + answerEx1Final + " square millimeters.\n");
 
         /*
          * Exercise 2.
@@ -43,10 +43,10 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         final double inchToCentimeter = 2.54;
-         double answerEx2 = ((length* 2* inchToCentimeter) + (width * 2* inchToCentimeter));
+        final double inchToCentimeter = 2.54;
+        double answerEx2 = ((length* 2* inchToCentimeter) + (width * 2* inchToCentimeter));
 
-         System.out.println(answerEx2 + " centimeters.\n");
+        System.out.println(answerEx2 + " centimeters.\n");
 
         /*
          * Exercise 3.
@@ -55,9 +55,9 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         double answerEx3 = Math.hypot(length, width);
-         String answerEx3Final = commaTwoDecimals.format(answerEx3);
-         System.out.println(answerEx3Final + " inches.\n");
+        double answerEx3 = Math.hypot(length, width);
+        String answerEx3Final = commaTwoDecimals.format(answerEx3);
+        System.out.println(answerEx3Final + " inches.\n");
 
         /*
          * Exercise 4.
@@ -76,7 +76,8 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-
+        int percentHomework = ((homework1 + homework2 + homework3)/3);
+        System.out.println((percentHomework));
 
         /*
          * Exercise 5.
