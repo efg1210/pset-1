@@ -150,7 +150,17 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
+        final int lengthEx8 = 48;
+        final int widthEx8 = 24;
+        final int diameter = 6;
 
+        float rectangleSize = lengthEx8 * widthEx8;
+        int radius = diameter / 2;
+        double circleSize = Math.PI * Math.pow(radius, 2);
+
+        String areaEx8 = commaTwoDecimals.format(rectangleSize - circleSize);
+
+        System.out.println(areaEx8 " square inches.\n");
 
         /*
          * Exercise 9.
