@@ -76,8 +76,15 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-        int percentHomework = ((homework1 + homework2 + homework3)/3);
-        System.out.println((percentHomework));
+        float percentHomework = ((homework1 + homework2 + homework3)/3f);
+
+        float percentQuiz = ((quiz1 + quiz2 + quiz3)/3f);
+
+        float percentTest = ((test1 + test2 + test3)/3f);
+
+        double grade = ((percentHomework*0.15) + (percentQuiz*0.35) + (percentTest*0.5));
+        String gradeFinal = commaTwoDecimals.format(grade);
+        System.out.println(gradeFinal + "%.\n");
 
         /*
          * Exercise 5.
