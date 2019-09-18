@@ -82,7 +82,7 @@ public class ProblemSet1 {
 
         float percentTest = ((test1 + test2 + test3)/3f);
 
-        double grade = ((percentHomework*0.15) + (percentQuiz*0.35) + (percentTest*0.5));
+        double grade = ((percentHomework * 0.15) + (percentQuiz * 0.35) + (percentTest * 0.5));
         String gradeFinal = commaTwoDecimals.format(grade);
         System.out.println(gradeFinal + "%.\n");
 
@@ -93,7 +93,14 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
+        final float hourlyWage = 12.5f;
+        float hours = 7.5f + 8f + 10.5f + 9.5f + 6f + 11.5f;
 
+        float earnings = hours * hourlyWage;
+
+        String earningsFinal = commaTwoDecimals.format(earnings);
+
+        System.out.println("$" + earningsFinal + ".\n");
 
         /*
          * Exercise 6.
@@ -101,6 +108,12 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
+        final int yearlyPay = 117000;
+
+        float preExpenseCheck = 117000 / 24;
+
+        float takeHomePay = preExpenseCheck - ((preExpenseCheck * 0.24f) + (preExpenseCheck * 0.0637f) + (preExpenseCheck * 0.07f));
+        System.out.println(takeHomePay);
 
 
         /*
