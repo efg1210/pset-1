@@ -66,6 +66,8 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
 
+        DecimalFormat percentFormat = new DecimalFormat("##.00%");
+
         int homework1 = 88;
         int homework2 = 91;
         int homework3 = 0;
@@ -83,8 +85,8 @@ public class ProblemSet1 {
         float percentTest = ((test1 + test2 + test3)/3f);
 
         double grade = ((percentHomework * 0.15) + (percentQuiz * 0.35) + (percentTest * 0.5));
-        String gradeFinal = commaTwoDecimals.format(grade);
-        System.out.println(gradeFinal + "%.\n");
+        String gradeFinal = percentFormat.format(grade);
+        System.out.println(gradeFinal + ".\n");
 
         /*
          * Exercise 5.
@@ -93,14 +95,16 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
+        DecimalFormat moneyFormat = new DecimalFormat("$#,###.00");
+
         final float hourlyWage = 12.5f;
         float hours = 7.5f + 8f + 10.5f + 9.5f + 6f + 11.5f;
 
         float earnings = hours * hourlyWage;
 
-        String earningsFinal = commaTwoDecimals.format(earnings);
+        String earningsFinal = moneyFormat.format(earnings);
 
-        System.out.println("$" + earningsFinal + ".\n");
+        System.out.println(earningsFinal + ".\n");
 
         /*
          * Exercise 6.
@@ -109,11 +113,19 @@ public class ProblemSet1 {
          */
 
         final int yearlyPay = 117000;
+        final float federalTax = 1 - 0.24f;
+        final float stateTax = 1 - 0.0637f;
+        final float retirementFund = 1 - 0.07f; //first
 
-        float preExpenseCheck = 117000 / 24;
+        float weeklyCheck = yearlyPay / 24f;
 
-        float takeHomePay = preExpenseCheck - ((preExpenseCheck * 0.24f) + (preExpenseCheck * 0.0637f) + (preExpenseCheck * 0.07f));
-        System.out.println(takeHomePay);
+        double takeHomePay = weeklyCheck * retirementFund;
+        takeHomePay = takeHomePay * federalTax;
+        takeHomePay = takeHomePay * stateTax;
+
+        String takeHomePayFinal = moneyFormat.format(takeHomePay);
+
+        System.out.println(takeHomePayFinal + ".\n");
 
 
         /*
