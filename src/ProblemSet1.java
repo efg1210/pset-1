@@ -115,7 +115,7 @@ public class ProblemSet1 {
         final int yearlyPay = 117000;
         final float federalTax = 1 - 0.24f;
         final float stateTax = 1 - 0.0637f;
-        final float retirementFund = 1 - 0.07f; //first
+        final float retirementFund = 1 - 0.07f;
 
         float weeklyCheck = yearlyPay / 24f;
 
@@ -135,7 +135,14 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
+        final int students = 273;
+        final int teachers = 28;
+        final int busCapacity = 54;
 
+        int totalPeople = students + teachers;
+        int busNumber = (totalPeople / busCapacity) + 1;
+        int lastBus = totalPeople % busCapacity;
+        System.out.println(busNumber + " are needed, with " + lastBus + " passengers on the last bus.\n");
 
         /*
          * Exercise 8.
