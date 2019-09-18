@@ -160,7 +160,7 @@ public class ProblemSet1 {
 
         String areaEx8 = commaTwoDecimals.format(rectangleSize - circleSize);
 
-        System.out.println(areaEx8 " square inches.\n");
+        System.out.println(areaEx8 + " square inches.\n");
 
         /*
          * Exercise 9.
@@ -168,7 +168,17 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
+        int year = 2020;
+        boolean leapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+        System.out.println(year + " is a leap year..." + leapYear);
 
+        year = 2100;
+        leapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+        System.out.println(year + " is a leap year..." + leapYear);
+
+        year = 2400;
+        leapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+        System.out.println(year + " is a leap year..." + leapYear + "\n");
 
         /*
          * Exercise 10.
