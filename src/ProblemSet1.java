@@ -15,8 +15,6 @@
 import java.lang.Math;
 import java.text.DecimalFormat;
 
-// cd ~/Desktop/APCSA/pset-1/src/
-
 public class ProblemSet1 {
 
     public static void main(String[] args) {
@@ -26,12 +24,13 @@ public class ProblemSet1 {
          *
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        final float inchToMillimeter = 25.4f;
 
-        final float length = 8.5f;
-        final float width = 11f;
+        final float INCH_TO_MILLIMETER = 25.4f;
 
-        double answerEx1 = (inchToMillimeter*length)*(inchToMillimeter*width);
+        final float LENGTH = 8.5f;
+        final float WIDTH = 11f;
+
+        double answerEx1 = (INCH_TO_MILLIMETER*LENGTH)*(INCH_TO_MILLIMETER*WIDTH);
         DecimalFormat commaTwoDecimals = new DecimalFormat("#,###.00");
         String answerEx1Final = commaTwoDecimals.format(answerEx1);
 
@@ -43,8 +42,8 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-        final double inchToCentimeter = 2.54;
-        double answerEx2 = ((length* 2* inchToCentimeter) + (width * 2* inchToCentimeter));
+        final double INCH_TO_CENTIMETER = 2.54;
+        double answerEx2 = ((LENGTH* 2* INCH_TO_CENTIMETER) + (WIDTH * 2* INCH_TO_CENTIMETER));
 
         System.out.println(answerEx2 + " centimeters.\n");
 
@@ -55,7 +54,7 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-        double answerEx3 = Math.hypot(length, width);
+        double answerEx3 = Math.hypot(LENGTH, WIDTH);
         String answerEx3Final = commaTwoDecimals.format(answerEx3);
         System.out.println(answerEx3Final + " inches.\n");
 
@@ -97,10 +96,10 @@ public class ProblemSet1 {
 
         DecimalFormat moneyFormat = new DecimalFormat("$#,###.00");
 
-        final float hourlyWage = 12.5f;
+        final float HOURLY_WAGE = 12.5f;
         float hours = 7.5f + 8f + 10.5f + 9.5f + 6f + 11.5f;
 
-        float earnings = hours * hourlyWage;
+        float earnings = hours * HOURLY_WAGE;
 
         String earningsFinal = moneyFormat.format(earnings);
 
@@ -112,16 +111,16 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-        final int yearlyPay = 117000;
-        final float federalTax = 1 - 0.24f;
-        final float stateTax = 1 - 0.0637f;
-        final float retirementFund = 1 - 0.07f;
+        final int YEARLY_PAY = 117000;
+        final float FEDERAL_TAX = 1 - 0.24f;
+        final float STATE_TAX = 1 - 0.0637f;
+        final float RETIREMENT_FUND = 1 - 0.07f;
 
-        float weeklyCheck = yearlyPay / 24f;
+        float weeklyCheck = YEARLY_PAY / 24f;
 
-        double takeHomePay = weeklyCheck * retirementFund;
-        takeHomePay = takeHomePay * federalTax;
-        takeHomePay = takeHomePay * stateTax;
+        double takeHomePay = weeklyCheck * RETIREMENT_FUND;
+        takeHomePay = takeHomePay * FEDERAL_TAX;
+        takeHomePay = takeHomePay * STATE_TAX;
 
         String takeHomePayFinal = moneyFormat.format(takeHomePay);
 
@@ -135,13 +134,13 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
-        final int students = 273;
-        final int teachers = 28;
-        final int busCapacity = 54;
+        final int STUDENTS = 273;
+        final int TEACHERS = 28;
+        final int BUS_CAPACITY = 54;
 
-        int totalPeople = students + teachers;
-        int busNumber = (totalPeople / busCapacity) + 1;
-        int lastBus = totalPeople % busCapacity;
+        int totalPeople = STUDENTS + TEACHERS;
+        int busNumber = (totalPeople / BUS_CAPACITY) + 1;
+        int lastBus = totalPeople % BUS_CAPACITY;
         System.out.println(busNumber + " are needed, with " + lastBus + " passengers on the last bus.\n");
 
         /*
@@ -150,12 +149,12 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-        final int lengthEx8 = 48;
-        final int widthEx8 = 24;
-        final int diameter = 6;
+        final int LEGNTH_EX8 = 48;
+        final int WIDTH_EX8 = 24;
+        final int DIAMETER = 6;
 
-        float rectangleSize = lengthEx8 * widthEx8;
-        int radius = diameter / 2;
+        float rectangleSize = LEGNTH_EX8 * WIDTH_EX8;
+        int radius = DIAMETER / 2;
         double circleSize = Math.PI * Math.pow(radius, 2);
 
         String areaEx8 = commaTwoDecimals.format(rectangleSize - circleSize);
@@ -198,6 +197,5 @@ public class ProblemSet1 {
         windChill +=  (0.6215 * temperature);
         windChill += 35.74;
         System.out.println(degreeFormat.format(windChill) + ".");
-
     }
 }
