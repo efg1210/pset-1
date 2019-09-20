@@ -186,7 +186,18 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
+        DecimalFormat degreeFormat = new DecimalFormat("##.0 degrees");
 
+        int temperature  = 38;
+        int windSpeed = 14;
+
+        double windChill;
+        windChill = 0.4275 * temperature;
+        windChill -= 35.75;
+        windChill = windChill * Math.pow(windSpeed, 0.16);
+        windChill +=  (0.6215 * temperature);
+        windChill += 35.74;
+        System.out.println(degreeFormat.format(windChill) + ".\n");
 
     }
 }
