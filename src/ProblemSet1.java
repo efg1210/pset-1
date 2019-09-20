@@ -66,14 +66,14 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
 
-        DecimalFormat percentFormat = new DecimalFormat("##.00%");
-
         int homework1 = 88;
         int homework2 = 91;
         int homework3 = 0;
+
         int quiz1 = 84;
         int quiz2 = 89;
         int quiz3 = 93;
+
         int test1 = 74;
         int test2 = 87;
         int test3 = 82;
@@ -85,8 +85,8 @@ public class ProblemSet1 {
         float percentTest = ((test1 + test2 + test3)/3f);
 
         double grade = ((percentHomework * 0.15) + (percentQuiz * 0.35) + (percentTest * 0.5));
-        String gradeFinal = percentFormat.format(grade);
-        System.out.println(gradeFinal + ".\n");
+        String gradeFinal = commaTwoDecimals.format(grade);
+        System.out.println(gradeFinal + "%.\n");
 
         /*
          * Exercise 5.
