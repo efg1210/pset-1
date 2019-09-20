@@ -197,7 +197,7 @@ public class ProblemSet1 {
         windChill = windChill * Math.pow(windSpeed, 0.16);
         windChill +=  (0.6215 * temperature);
         windChill += 35.74;
-        System.out.println(degreeFormat.format(windChill) + ".\n");
+        System.out.println(degreeFormat.format(windChill) + ".");
 
     }
 }
